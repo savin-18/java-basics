@@ -1,0 +1,33 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
+public class DiffWaysToIterateList {
+    public static void main(String[] args) {
+        List<String> langs = Arrays.asList("c","c++","c#","java","JavaScript","Python","swift","flutter","react","Angular");
+        System.out.println("BELOW ONE GETTING BASED ON INDEXING USING FOR LOOP");
+        for (int i=0;i<langs.size();i++){
+            System.out.println(langs.get(i));
+        }
+        System.out.println("BELOW ONE IS USING ENHANCED FOR LOOP");
+        for (String lang : langs){
+            System.out.println(lang);
+        }
+
+        System.out.println("BELOW ONE USING WHILE LOOP");
+
+        Iterator<String> iterator = langs.iterator();
+
+        while (iterator.hasNext()){
+            String lang = (String) iterator.next();
+            System.out.println(lang);
+        }
+        //Using java8 stream with lambda example
+        System.out.println("BELOW ONE BASED ON STREAM");
+        langs.stream().forEach(lang-> System.out.println(lang));
+        System.out.println("BELOW ONE USING LAMBDA+FOR EACH");
+        //for each with lambda expression
+        langs.forEach(lang-> System.err.println(lang));
+    }
+}
