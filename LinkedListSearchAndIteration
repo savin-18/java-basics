@@ -1,0 +1,39 @@
+package com.java.collections.LinkedList;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedListSearchAnElementAndIteration {
+    public static void main(String[] args) {
+
+        LinkedList<String> cars = new LinkedList<>();
+        cars.add("ford");//0
+        cars.add("Honda");//1
+        cars.add("toyota");//4
+        cars.add("swift");//2
+        cars.add("mustang");//3
+        cars.add("toyota");//4
+        cars.add("ferrari");//5
+
+        System.out.println("RESULT -"+cars.contains("ferrari"));
+        System.out.println("INDEX OF METHOD - "+cars.indexOf("swift"));
+        System.out.println("LAST INDEX - "+cars.lastIndexOf("toyota"));
+
+        System.out.println();
+        System.out.println("iterator");
+        Iterator<String> it = cars.iterator();
+        while (it.hasNext()){
+            System.out.println(it.next());
+        }
+        System.out.println();
+        System.out.println("for each");
+        cars.forEach((element->{
+            System.out.println(element);
+        }));
+        System.out.println();
+        System.out.println("ADVANCED FOR LOOP");
+        for (String s : cars){
+            System.out.println(s);
+        }
+    }
+}
