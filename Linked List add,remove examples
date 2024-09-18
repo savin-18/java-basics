@@ -1,0 +1,64 @@
+package com.java.collections.LinkedList;
+
+import java.util.LinkedList;
+
+/**the following things have been in follwoing code samples
+ 1.how to get the first element from the linked list
+ 2.how to get the last element from the linked list
+ 3.how to get the index based elements from the linked list
+ 4.getting all the elements from the linked list
+ 5.removing elements from the linked list*/
+
+
+public class RetriveLinkedListExample {
+    public static void main(String[] args) {
+        LinkedList<String> cars = new LinkedList<>();
+        cars.add("ford");
+        cars.add("Honda");
+        cars.add("swift");
+        cars.add("mustang");
+        cars.add("toyota");
+        cars.add("ferrari");
+        LinkedList<String> bikes = new LinkedList<>();
+        bikes.add("ns200");
+        bikes.add("ducati");
+        bikes.add("R15");
+        bikes.add("royal enfield;");
+       cars.addAll(bikes);
+        System.out.println("LIST AFTER ADDING TWO LIST");
+        System.out.println(cars);
+
+        //getting first using getfirst() method
+        System.out.println(cars);
+        System.out.println("LAST ELEMENT -"+cars.getFirst());
+
+
+        cars.addAll(bikes);
+        System.out.println("LIST AFTER ADDING TWO LIST");
+        System.out.println(cars);
+
+        System.out.println("LIST AFTER REMOVING ONE LIST");
+        cars.removeAll(bikes);
+        System.out.println(cars);
+        //getting first using getlast() method
+        System.out.println();
+        System.out.println("TO GET THE LAST ELEMENT -"+cars.getLast());
+
+        System.out.println();
+        System.out.println("FETCHING USING POSITION -"+cars.get(2));
+
+        //to get the all elements
+        for (int i = 0; i < cars.size(); i++) {
+            System.out.println(cars.get(i));
+        }
+        System.out.println();
+        cars.removeFirst();
+        cars.removeLast();
+        cars.remove(1);
+
+        System.out.println("PENDING LIST -"+cars);
+        System.out.println();
+
+        System.out.println("AFTER CLEAR -"+cars);
+    }
+}
