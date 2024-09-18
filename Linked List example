@@ -1,0 +1,28 @@
+package com.java.collections.LinkedList;
+
+import java.util.LinkedList;
+
+//add()
+//add(based on location ) (2,element)
+//addfirst() from deque interface
+//addlast() deque interface
+public class LinkedListExample {
+    public static void main(String[] args) {
+        LinkedList<String> fruits = new LinkedList<String>();
+        fruits.add("mango");//0
+        fruits.add("apple");//1
+        fruits.add("orange");//2
+        fruits.add("pineapple");//3
+        System.out.println(fruits);
+        fruits.add(2,"watermelon");
+        System.out.println(fruits);
+
+        fruits.addFirst("strwberry");
+        System.out.println("AFTER FIRST");
+        System.out.println(fruits);
+
+        System.out.println("ADDING AT END OF METHOD");
+        fruits.addLast("Grapes");
+        System.out.println(fruits);
+    }
+}
