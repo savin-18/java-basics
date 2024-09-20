@@ -1,0 +1,57 @@
+package com.java.collections.Hashset;
+
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        //nullValues();
+        //duplicateValue();
+        //orders();
+        addExample();
+    }
+    //set will allow only one null values
+    public static void nullValues() {
+        Set<String> sets = new HashSet<>();
+        sets.add(null);
+        sets.add(null);
+        System.out.println(sets);
+    }
+    //set will not allow duplicate values
+    public static void duplicateValue(){
+        Set<String> bikes = new HashSet<>();
+        bikes.add("ns200");
+        bikes.add("royal enfield");
+        bikes.add("rx100");
+        bikes.add("rx100");
+        bikes.add("ns200");
+        System.out.println(bikes);
+    }
+
+    //set will not maintains the insertion order
+    public static void orders(){
+        Set<Integer> nums = new HashSet<>();
+        nums.add(2);
+        nums.add(3);
+        nums.add(7);
+        nums.add(1);
+        nums.add(4);
+        System.out.println(nums);
+    }
+    //it will not allow duplicates and it doesn't maintains the insertion order
+    //iternally uses hash map to store data's
+    public static void addExample(){
+        Set<String> langs = new HashSet<>();
+        langs.add("c");
+        langs.add("c++");
+        langs.add("python");
+        langs.add("java");
+        langs.add("javascript");
+        langs.add("java");
+        langs.add("flutter");
+        System.out.println(langs);
+    }
+}
+
+
