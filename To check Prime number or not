@@ -1,0 +1,26 @@
+import java.util.*;
+class Solution {
+    public static void main(String args[]){
+
+    Scanner scan = new Scanner (System.in);
+    System.out.print("Please Enter a number to check Prime or Not : ");
+    int num = scan.nextInt();
+    boolean val = true;
+    if(num == 0 || num ==1){
+        val = false;
+    }else if(num == 2){
+        val = true;
+    }
+    for(int i=2 ;i<=num/2;i++){
+        if(num % i == 0){
+          val = false;
+          break;
+        }
+      }
+      System.out.println("Given Number " + num + "is a prime number : "+val);
+    }
+}
+
+sample output
+Please Enter a number to check Prime or Not : 1829
+Given Number 1829 is a prime number : false
