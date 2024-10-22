@@ -1,0 +1,15 @@
+import java.util.*;
+class Main {
+	public static void main (String args[]){
+		Scanner scan = new Scanner(System.in);
+		String sa = scan.next();
+		System.out.println(vowelsPresent(sa));
+	}
+	public static boolean vowelsPresent(String sa){
+		boolean val = false;
+		if(sa.toLowerCase().matches("'*[aeiou].*")){
+			val = true;
+		}
+	return val;
+	}
+}
