@@ -44,7 +44,7 @@ public class AcessElementsFromArrayList {
 
         //clear method is used to remove all the elements from the list
         stringList.clear();
-        System.out.println("LIST AFTER CLEARING ALL ELEMENTS"+stringList);
+        System.out.println("LIST AFTER CLEARIN G ALL ELEMENTS"+stringList);
 
     }
 }
